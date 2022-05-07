@@ -14,13 +14,16 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', function () {
-    //log hello world on the server
-
-    \Log::info('Hello World');
-
     return view('welcome');
 });
 
 Route::get('/login', function () {
     return view('login');
+});
+
+Route::get('/home', function () {
+    return view('home');
+});
+Route::get('/withdraw', function () {
+    return view('withdraw');
 });
