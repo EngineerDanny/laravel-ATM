@@ -61,15 +61,10 @@
     </style>
 
     <style>
-        .welcome-h1{
-
+        .welcome-h1 {
             font-weight: 700;
             color: #1e1e1e;
-            margin-bottom: 1rem;
-            margin-top: 1rem;
-
-
-
+            margin-bottom: 2rem;
         }
 
         body {
@@ -78,6 +73,16 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+
+        .body-div {
+            border: rgb(96, 9, 240);
+            border: linear-gradient(0deg, rgba(96, 9, 240, 1) 0%, rgba(129, 5, 240, 1) 100%);
+            border-style: solid;
+            border-width: 10px;
+            padding: 5%;
+            border-radius: 30px;
+            background-color: #fff;
         }
 
         .input {
@@ -135,7 +140,6 @@
             background: rgb(96, 9, 240);
             background: linear-gradient(0deg, rgba(96, 9, 240, 1) 0%, rgba(129, 5, 240, 1) 100%);
             border: none;
-
         }
 
         .btn:before {
@@ -154,31 +158,25 @@
 </head>
 
 <body>
-    <h1 class="welcome-h1" >WELCOME TO ATM</h1>
+    <div class="body-div">
+        <h1 class="welcome-h1">WELCOME TO ATM</h1>
+        <div class="input-div">
+            <span>Card No: </span> <span>{{ $card_no ?? '' }}</span>
+            <div class="input-group">
+                <input required type="text" name="text" autocomplete="off" class="input">
+            </div>
+        </div>
+        <div class="input-div">
+            <span>PIN : </span> <span>{{ $card_no ?? '' }}</span>
+            <div class="input-group">
+                <input required type="text" name="text" autocomplete="off" class="input">
+            </div>
+        </div>
 
-    <div class="input-div">
-        <span>Card No: </span> <span>{{ $card_no ?? '' }}</span>
-        <div class="input-group">
-            <input required type="text" name="text" autocomplete="off" class="input">
+        <div>
+            <button class="btn custom-btn" onclick="location.href='{{ url('/home') }}'">SIGN IN</button>
+            <button class="btn custom-btn">SIGN UP</button>
         </div>
     </div>
-    <div class="input-div">
-        <span>PIN : </span> <span>{{ $card_no ?? '' }}</span>
-        <div class="input-group">
-            <input required type="text" name="text" autocomplete="off" class="input">
-        </div>
-    </div>
-
-    <div>
-        <button class="btn custom-btn">SIGN IN</button>
-        <button class="btn custom-btn">SIGN UP</button>
-
-    </div>
-
-
-
-
-
 </body>
-
 </html>
