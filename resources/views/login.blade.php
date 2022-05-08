@@ -82,7 +82,7 @@
             border-width: 10px;
             padding: 5%;
             border-radius: 30px;
-            background-color: #fff;
+            background-color: #EDECED;
         }
 
         .input {

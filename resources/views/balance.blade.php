@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Balance</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -35,6 +35,34 @@
             line-height: 1.5
         }
 
+        .input-div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 300px;
+            margin-bottom: 1rem;
+        }
+
+        .input {
+            border: solid 1.5px;
+            border-radius: 10px;
+            background: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+            &-group {
+                position: relative;
+            }
+
+            &:focus,
+            &:valid {
+                outline: none;
+                border: 1.5px solid #1a73e8;
+            }
+        }
+
     </style>
 
     <style>
@@ -48,7 +76,7 @@
 
         .custom-btn {
             width: 130px;
-            height: 40px;
+            height: 60px;
             color: #fff;
             border-radius: 5px;
             padding: 10px 25px;
@@ -99,11 +127,16 @@
             padding: 5%;
             border-radius: 30px;
             background-color: #EDECED;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 5%;
         }
 
-        .menu-container{
+        .menu-container {
             display: grid;
-            grid-template-columns: 1fr 1fr ;
+            grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             gap: 1rem;
 
@@ -116,29 +149,22 @@
             text-align: center;
         }
 
-
+        .withdraw-h2{
+            font-weight: 700;
+            color: #1e1e1e;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
 
     </style>
 </head>
 
-<body class="antialiased">
+<body>
     <div class="body-div">
-
-
-        <h1 class="menu-h1">ATM MENU</h1>
-
-        <div class="menu-container">
-            <button class="btn custom-btn" onclick="location.href='{{ url('/withdraw') }}'">Withdraw</button>
-
-            <button class="btn custom-btn" onclick="location.href='{{ url('/deposit') }}'">Deposit</button>
-
-            <button class="btn custom-btn" onclick="location.href='{{ url('/transfer') }}'">Transfer
-                to</button>
-
-            <button class="btn custom-btn" onclick="location.href='{{ url('/balance') }}'">Balance</button>
-        </div>
+        <h1 class="menu-h1">BALANCE</h1>
+        <h2 class="withdraw-h2"> Your Balance is USD 900</h2>
+        <button class="btn custom-btn" onclick="location.href='{{ url('/home') }}'">BACK TO MENU</button>
     </div>
-
 </body>
 
 </html>
