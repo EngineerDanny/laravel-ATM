@@ -77,7 +77,7 @@
 
         .custom-btn {
             width: 130px;
-            height: 40px;
+            height: 60px;
             color: #fff;
             border-radius: 5px;
             padding: 10px 25px;
@@ -150,10 +150,9 @@
             text-align: center;
         }
 
-        .withdraw-h2{
+        .withdraw-h2 {
             font-weight: 700;
             color: #1e1e1e;
-            margin-bottom: 2rem;
             text-align: center;
         }
 
@@ -162,13 +161,10 @@
 
 <body>
     <div class="body-div">
-        <h1 class="menu-h1">DEPOSIT</h1>
-        <h2 class="withdraw-h2"> How much do you want to deposit ? </h2>
-        <div class="input-group">
-            <input required type="text" name="text" autocomplete="off" class="input">
-        </div>
+        <h1 class="menu-h1">TRANSFER</h1>
+        <h2>You can't perform transfers at this time</h2>
 
-        <button class="btn custom-btn" onclick="location.href='{{ url('/withdraw') }}'">Confirm</button>
+        <button class="btn custom-btn" onclick="location.href='{{ url('/home') }}'">BACK TO MENU</button>
     </div>
 </body>
 
