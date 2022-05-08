@@ -27,3 +27,12 @@ Route::get('/home', function () {
 Route::get('/withdraw', function () {
     return view('withdraw');
 });
+Route::get('/balance', function () {
+    return view('balance');
+});
+Route::get('/transfer', function () {
+    return view('transfer');
+});
+Route::get('/deposit', function () {
+    return view('deposit');
+});
