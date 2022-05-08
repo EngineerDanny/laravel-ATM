@@ -89,9 +89,11 @@
             border: solid 1.5px;
             border-radius: 10px;
             background: none;
+            background-color: #fff;
             padding: 10px 20px;
             font-size: 1rem;
             transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: #fff;
 
             &-group {
                 position: relative;
