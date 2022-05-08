@@ -127,6 +127,11 @@
             padding: 5%;
             border-radius: 30px;
             background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 5%;
         }
 
         .menu-container {
@@ -144,18 +149,24 @@
             text-align: center;
         }
 
+        .withdraw-h2{
+            font-weight: 700;
+            color: #1e1e1e;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
     </style>
 </head>
 
 <body>
     <div class="body-div">
         <h1 class="menu-h1">WITHDRAW</h1>
-        <h2> How much do you want to withdraw ? </h2>
-        <div class="input-div">
-            <div class="input-group">
-                <input required type="text" name="text" autocomplete="off" class="input">
-            </div>
+        <h2 class="withdraw-h2"> How much do you want to withdraw ? </h2>
+        <div class="input-group">
+            <input required type="text" name="text" autocomplete="off" class="input">
         </div>
+
         <button class="btn custom-btn" onclick="location.href='{{ url('/withdraw') }}'">Confirm</button>
     </div>
 </body>
