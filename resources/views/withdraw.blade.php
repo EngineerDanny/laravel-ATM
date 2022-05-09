@@ -168,7 +168,11 @@
             <input required type="text" name="text" autocomplete="off" class="input">
         </div>
 
-        <button class="btn custom-btn" onclick="location.href='{{ url('/withdraw') }}'">Confirm</button>
+        <div class="btns-div">
+            <button class="btn custom-btn" onclick="location.href='{{ url('/withdraw') }}'">Confirm</button>
+            <button class="btn custom-btn" onclick="location.href='{{ url('/home') }}'">Back</button>
+        </div>
+     
     </div>
 </body>
 

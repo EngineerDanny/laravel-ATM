@@ -150,11 +150,20 @@
             text-align: center;
         }
 
-        .withdraw-h2{
+        .withdraw-h2 {
             font-weight: 700;
             color: #1e1e1e;
             margin-bottom: 2rem;
             text-align: center;
+        }
+
+        .btns-div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+
         }
 
     </style>
@@ -168,7 +177,11 @@
             <input required type="text" name="text" autocomplete="off" class="input">
         </div>
 
-        <button class="btn custom-btn" onclick="location.href='{{ url('/withdraw') }}'">Confirm</button>
+        <div class="btns-div">
+            <button class="btn custom-btn" onclick="location.href='{{ url('/withdraw') }}'">Confirm</button>
+            <button class="btn custom-btn" onclick="location.href='{{ url('/home') }}'">Back</button>
+        </div>
+
     </div>
 </body>
 
